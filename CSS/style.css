@@ -1,0 +1,160 @@
+/* ^ Font */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/*^ Colors */
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*^ Utilites */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url("/images/pattern-background-desktop.svg") no-repeat center
+    center/cover;
+  background-color: var(--pale-blue);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ^ Main Style */
+#card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#card .hero {
+  width: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+#card .card-content {
+  background-color: hsl(225, 100%, 98%);
+  padding: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+#card .card-content h1 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-content .p {
+  margin: 20px 0;
+  color: hsl(224, 23%, 55%);
+  line-height: 1.4;
+}
+
+.card-plan {
+  display: flex;
+  align-items: center;
+  background-color: hsl(224, 44%, 95%);
+  padding: 20px 15px;
+  border-radius: 10px;
+}
+.card-plan img {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+}
+
+.card-plan-text h3 {
+  color: hsl(223, 47%, 23%);
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.card-plan-text p {
+  color: hsl(224, 23%, 55%);
+  font-size: 16px;
+}
+.card-plan a {
+  color: var(--bright-blue);
+  font-weight: 900;
+  margin-left: 5rem;
+  font-size: 14px;
+}
+
+.card-content button {
+  display: block;
+  margin: 25px auto 10px;
+  border: none;
+}
+.card-content button:first-of-type {
+  background: var(--bright-blue);
+  color: #fff;
+  padding: 13px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.card-content .btn {
+  color: hsl(224, 23%, 55%);
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+/* & Mobile design */
+@media screen and (max-width: 500px) {
+  body {
+    background: url("/images/pattern-background-mobile.svg") no-repeat center
+      center/cover;
+    background-color: var(--pale-blue);
+  }
+  #card .hero {
+    width: 300px;
+  }
+  #card .card-content {
+    width: 300px;
+  }
+  #card .card-content h1 {
+    font-size: 24px;
+  }
+  .card-plan {
+    padding: 15px 10px;
+  }
+  .card-plan img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .card-plan a {
+    margin-left: 2rem;
+  }
+  .card-plan-text h3,
+  .card-plan-text p {
+    font-size: 14px;
+  }
+}
+
+/*
+ hsl(225, 100%, 94%)
+-hsl(245, 75%, 52%)
+
+### Neutral
+
+- hsl(224, 23%, 55%)
+- hsl(224, 23%, 55%)
+ hsl(223, 47%, 23%)
+*/
